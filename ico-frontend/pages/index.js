@@ -89,8 +89,8 @@ export default function Home() {
         signer
       )
       
-      const value = 0.001 * amount
-      const tx = await tokenContract.mint(amount, {
+      const value = 0.001 * tokenAmount
+      const tx = await tokenContract.mint(tokenAmount, {
         value: utils.parseEther(value.toString())
       })
 
