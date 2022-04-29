@@ -117,7 +117,7 @@ export default function Home() {
         TOKEN_CONTRACT_ABI,
         signer
         )
-
+      
       const tx = await tokenContract.claim()
       setLoading(true)
       await tx.wait()
@@ -127,7 +127,7 @@ export default function Home() {
       
       await getBalanceOfCryptoDevTokens()
       await getTotalTokensMinted()
-      await getTotalTokensClaimed()
+      await getTokensToBeClaimed()
     } catch (err) {
       console.error(err);
     }
