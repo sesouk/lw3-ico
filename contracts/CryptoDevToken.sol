@@ -36,7 +36,7 @@ contract CryptoDevToken is ERC20, Ownable {
     uint256 amount = 0;
     
     for (uint256 i = 0; i < balance; i++) {
-      uint256 tokenId = CryptoDevsNFT.tokenOwnedByIndex(sender, i);
+      uint256 tokenId = CryptoDevsNFT.tokenOfOwnerByIndex(sender, i);
       if (!tokenIdsClaimed[tokenId]) {
         amount += 1;
         tokenIdsClaimed[tokenId] = true;
